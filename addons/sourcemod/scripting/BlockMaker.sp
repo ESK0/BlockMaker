@@ -28,16 +28,14 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-    RegAdminCmd("sm_bm", Command_BlockMaker, ADMFLAG_ROOT);
+    //RegAdminCmd("sm_bm", Command_BlockMaker, ADMFLAG_ROOT);
+    RegConsoleCmd("sm_bm", Command_BlockMaker);
     HookEvent("player_spawn", Event_OnPlayerSpawn);
     HookEvent("player_death", Event_OnPlayerDeath);
     HookEvent("round_end", Event_OnRoundEnd);
     HookEvent("round_start", Event_OnRoundStart);
 
     Database.Connect(Database_Connect, "blockmaker");
-
-    g_offsNextPrimaryAttack = FindSendPropInfo("CBaseCombatWeapon", "m_flNextPrimaryAttack");
-    g_offsNextSecondaryAttack = FindSendPropInfo("CBaseCombatWeapon", "m_flNextSecondaryAttack");
 
     BuildPath(Path_SM, sDownloadFilePath, sizeof(sDownloadFilePath), "configs/BlockMaker_DownloadList.txt");
 

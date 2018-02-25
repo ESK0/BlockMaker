@@ -12,8 +12,6 @@ int g_iPlayerNewEntity[MAXPLAYERS+1];
 float g_fPlayerSelectedBlockDistance[MAXPLAYERS+1];
 int g_iPlayerPrevButtons[MAXPLAYERS+1];
 
-int g_offsNextPrimaryAttack = -1;
-int g_offsNextSecondaryAttack = -1;
 int g_iStoredBlock[MAXPLAYERS+1] = {-1,...};
 int g_iBunyHopTouch[MAXPLAYERS+1] = {-1,...};
 
@@ -31,26 +29,26 @@ char szCurrentMap[64];
 
 enum
 {
-  BlockDBId = 0,
-  BlockChanged,
-  BlockType,
-  BlockSize,
-  BlockOrigin,
-  BlockAngles,
-  BlockOtherValue
+    BlockDBId = 0,
+    BlockChanged,
+    BlockType,
+    BlockSize,
+    BlockOrigin,
+    BlockAngles,
+    BlockOtherValue
 };
 
 enum
 {
-  Db_Id = 0,
-  Db_Mapname,
-  Db_Type,
-  Db_Size,
-  Db_PosX,
-  Db_PosY,
-  Db_PosZ,
-  Db_AngleX,
-  Db_AngleY,
-  Db_AngleZ,
-  Db_Extra,
+    Db_Id = 0,
+    Db_Mapname,
+    Db_Type,
+    Db_Size,
+    Db_PosX,
+    Db_PosY,
+    Db_PosZ,
+    Db_AngleX,
+    Db_AngleY,
+    Db_AngleZ,
+    Db_Extra,
 };
