@@ -28,8 +28,7 @@ public Plugin myinfo =
 
 public void OnPluginStart()
 {
-    //RegAdminCmd("sm_bm", Command_BlockMaker, ADMFLAG_ROOT);
-    RegConsoleCmd("sm_bm", Command_BlockMaker);
+    RegAdminCmd("sm_bm", Command_BlockMaker, ADMFLAG_ROOT);
     HookEvent("player_spawn", Event_OnPlayerSpawn);
     HookEvent("player_death", Event_OnPlayerDeath);
     HookEvent("round_end", Event_OnRoundEnd);
